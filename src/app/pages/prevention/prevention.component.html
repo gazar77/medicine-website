@@ -1,0 +1,13 @@
+<div class="container my-5">
+  <h2 class="text-center fw-bold mb-4">
+    {{ lang === 'ar' ? 'طرق الوقاية' : 'Prevention Methods' }}
+  </h2>
+  <div class="row text-center">
+    <div class="col-md-4" *ngFor="let item of preventionItems">
+      <div class="p-4 shadow-sm rounded bg-light mb-3">
+        <h5>{{ lang === 'ar' ? item.titleAr : item.titleEn }}</h5>
+        <p>{{ lang === 'ar' ? item.descAr : item.descEn }}</p>
+      </div>
+    </div>
+  </div>
+</div>

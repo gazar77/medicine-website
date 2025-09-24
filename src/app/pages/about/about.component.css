@@ -1,0 +1,82 @@
+/* About Page Styling */
+.about-page {
+  padding: 60px 0;
+}
+
+.about-page h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #b22222; /* أحمر صحي قريب من لون القلب */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-page h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #b22222;
+  margin-top: 10px;
+  border-radius: 3px;
+  animation: expandLine 1s ease forwards;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* صورة القلب */
+.about-page img {
+  max-width: 90%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-page img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+}
+
+/* Animation */
+@keyframes expandLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+/* دخول الصفحة بانيميشن */
+.about-page .content {
+  animation: fadeInLeft 1s ease;
+}
+
+.about-page .text-center {
+  animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

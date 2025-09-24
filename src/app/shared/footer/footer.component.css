@@ -1,0 +1,77 @@
+/* ===== Footer Styling ===== */
+.footer {
+  background: linear-gradient(135deg, #0a0f1c, #1c2a44);
+  color: #ddd;
+  font-size: 0.95rem;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
+
+.footer h5 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.footer h5::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ff4b5c;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.footer p {
+  margin: 0;
+  color: #bbb;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #bbb !important;
+  transition: color 0.3s ease, padding-right 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ff4b5c !important;
+  padding-right: 5px;
+}
+
+.footer .social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2) rotate(-5deg);
+  color: #ff4b5c;
+}
+
+.footer hr {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer p.mb-0 {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

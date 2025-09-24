@@ -1,0 +1,109 @@
+/* 🌟 تنسيق أساسي للصفحة */
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #f8f9fc;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌟 العنوان الرئيسي */
+.container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a3c6e;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.container h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4b5c, #1a73e8);
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* 🌟 الكروت */
+.card {
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌟 عنوان الكارت */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+/* 🌟 النص */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* 🌟 زرار */
+.btn-primary {
+  background: linear-gradient(90deg, #1a73e8, #0044cc);
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0044cc, #1a73e8);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(26, 115, 232, 0.4);
+}
+
+/* 🌟 أنيميشن */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

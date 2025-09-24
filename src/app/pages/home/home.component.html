@@ -1,0 +1,104 @@
+<!-- النسخة العربية -->
+<div *ngIf="lang === 'ar'">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero bg-secondary text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">صحة قلبك.. استثمارك الحقيقي في الحياة</h1>
+        <p class="lead">معلومات طبية دقيقة ومبسطة عن صحة القلب والأوعية الدموية</p>
+        <a routerLink="/diseases" class="btn btn-primary btn-lg m-2">اكتشف الأمراض</a>
+        <a routerLink="/about" class="btn btn-outline-light btn-lg m-2">اعرف المزيد</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats container">
+    <div class="stat-card" *ngFor="let stat of stats">
+      <h2>{{ stat.prefix || '' }}{{ stat.value | number }}{{ stat.suffix || '' }}</h2>
+      <p>{{ stat.label }}</p>
+    </div>
+  </section>
+
+  <!-- About Short Section -->
+  <section class="about-short container">
+    <h2>عن المشروع</h2>
+    <p>
+      مشروع توعوي وتعليمي بالتعاون بين كلية الحاسبات والطب يهدف لتقديم محتوى
+      علمي مبسط عن أمراض القلب وطرق الوقاية منها.
+    </p>
+    <a routerLink="/about" class="btn btn-primary">اقرأ المزيد</a>
+  </section>
+
+  <!-- Preview Diseases Section -->
+  <section class="preview-diseases container">
+    <h2>أكثر الأمراض شيوعًا</h2>
+    <div class="disease-grid">
+      <div class="disease-card">
+        <h3>مرض الشريان التاجي</h3>
+        <p>ضيق أو انسداد في الشرايين التاجية.</p>
+      </div>
+      <div class="disease-card">
+        <h3>النوبة القلبية</h3>
+        <p>توقف تدفق الدم إلى جزء من عضلة القلب.</p>
+      </div>
+      <div class="disease-card">
+        <h3>اضطراب ضربات القلب</h3>
+        <p>اضطراب في ضربات القلب.</p>
+      </div>
+    </div>
+    <a routerLink="/diseases" class="btn btn-outline">المزيد من الأمراض</a>
+  </section>
+</div>
+
+<!-- النسخة الإنجليزية -->
+<div *ngIf="lang === 'en'">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero bg-secondary text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Your Heart Health.. Your Real Investment in Life</h1>
+        <p class="lead">Accurate and simple medical information about cardiovascular health</p>
+        <a routerLink="/diseases" class="btn btn-primary btn-lg m-2">Discover Diseases</a>
+        <a routerLink="/about" class="btn btn-outline-light btn-lg m-2">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats container">
+    <div class="stat-card" *ngFor="let stat of stats">
+      <h2>{{ stat.prefix || '' }}{{ stat.value | number }}{{ stat.suffix || '' }}</h2>
+      <p>{{ stat.labelEn }}</p>
+    </div>
+  </section>
+
+  <!-- About Short Section -->
+  <section class="about-short container">
+    <h2>About the Project</h2>
+    <p>
+      An educational awareness project in collaboration between the Faculty of Computers and Medicine aiming to provide simple scientific content about heart diseases and prevention methods.
+    </p>
+    <a routerLink="/about" class="btn btn-primary">Read More</a>
+  </section>
+
+  <!-- Preview Diseases Section -->
+  <section class="preview-diseases container">
+    <h2>Most Common Diseases</h2>
+    <div class="disease-grid">
+      <div class="disease-card">
+        <h3>Coronary Artery Disease</h3>
+        <p>Narrowing or blockage of the coronary arteries.</p>
+      </div>
+      <div class="disease-card">
+        <h3>Heart Attack</h3>
+        <p>Blood flow stops to a part of the heart muscle.</p>
+      </div>
+      <div class="disease-card">
+        <h3>Arrhythmia</h3>
+        <p>Irregularity in heartbeats.</p>
+      </div>
+    </div>
+    <a routerLink="/diseases" class="btn btn-outline">More Diseases</a>
+  </section>
+</div>

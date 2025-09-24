@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="360_F_560967521_wFYYYjX2XvuhIrt4lP5lEGrOf2wDcT4o.jpg" alt="Logo" width="30" height="30" class="me-2" />
+      Cardio Project
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" routerLink="/home">{{ labels.home }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about">{{ labels.about }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/diseases">{{ labels.diseases }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/prevention">{{ labels.prevention }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact">{{ labels.contact }}</a></li>
+
+        <!-- Dropdown اختيار اللغة -->
+        <li class="nav-item ms-3 d-flex align-items-center">
+          <select class="form-select form-select-sm" [(ngModel)]="selectedLang" (change)="changeLang(selectedLang)">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

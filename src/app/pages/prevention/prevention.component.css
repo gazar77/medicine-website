@@ -1,0 +1,80 @@
+/* ====== Prevention Section ====== */
+.container h2 {
+  font-size: 2.2rem;
+  color: #1c2a44;
+  margin-bottom: 40px;
+  position: relative;
+  animation: fadeDown 1.2s ease;
+}
+
+.container h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #ff4b5c;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.container .row {
+  gap: 20px;
+  justify-content: center;
+}
+
+.container .col-md-4 {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.container .p-4 {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeUp 1.2s ease;
+}
+
+.container .p-4:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+.container h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ff4b5c;
+}
+
+.container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

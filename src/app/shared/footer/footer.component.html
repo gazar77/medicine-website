@@ -1,0 +1,34 @@
+<footer class="footer mt-auto py-4 bg-dark text-white">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">❤️ Cardio Project</h5>
+        <p>{{ lang === 'ar' ? 'معاً من أجل قلب صحي وحياة أفضل' : 'Together for a healthy heart and better life' }}</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">{{ lang === 'ar' ? 'روابط سريعة' : 'Quick Links' }}</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="/home" class="text-decoration-none text-light">{{ lang === 'ar' ? 'الرئيسية' : 'Home' }}</a></li>
+          <li><a routerLink="/about" class="text-decoration-none text-light">{{ lang === 'ar' ? 'عن المشروع' : 'About' }}</a></li>
+          <li><a routerLink="/diseases" class="text-decoration-none text-light">{{ lang === 'ar' ? 'الأمراض' : 'Diseases' }}</a></li>
+          <li><a routerLink="/prevention" class="text-decoration-none text-light">{{ lang === 'ar' ? 'الوقاية' : 'Prevention' }}</a></li>
+          <li><a routerLink="/contact" class="text-decoration-none text-light">{{ lang === 'ar' ? 'تواصل معنا' : 'Contact' }}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold mb-2">{{ lang === 'ar' ? 'تابعنا' : 'Follow Us' }}</h5>
+        <div class="social-icons d-flex justify-content-center gap-3">
+          <a href="#" class="text-light fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light" />
+    <p class="mb-0">{{ lang === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved' }}</p>
+  </div>
+</footer>
