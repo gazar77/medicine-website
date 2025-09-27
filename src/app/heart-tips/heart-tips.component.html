@@ -1,0 +1,41 @@
+<div class="heart-tips">
+  <!-- Lifestyle Card -->
+  <div class="heart-card">
+    <h3>{{ selectedLang === 'ar' ? 'أسلوب الحياة والنشاط البدني' : 'Lifestyle & Physical Activity' }}</h3>
+    <ul>
+      <li *ngFor="let tip of tips[selectedLang].lifestyle">{{ tip }}</li>
+    </ul>
+  </div>
+
+  <!-- Nutrition Card -->
+  <div class="heart-card">
+    <h3>{{ selectedLang === 'ar' ? 'التغذية' : 'Nutrition' }}</h3>
+    <ul>
+      <li *ngFor="let tip of tips[selectedLang].nutrition">{{ tip }}</li>
+    </ul>
+  </div>
+
+  <!-- Daily Habits Card -->
+  <div class="heart-card">
+    <h3>{{ selectedLang === 'ar' ? 'العادات اليومية' : 'Daily Habits' }}</h3>
+    <ul>
+      <li *ngFor="let tip of tips[selectedLang].dailyHabits">{{ tip }}</li>
+    </ul>
+  </div>
+
+  <!-- Checkups Card -->
+  <div class="heart-card">
+    <h3>{{ selectedLang === 'ar' ? 'الفحوصات والمتابعة' : 'Check-ups & Follow-up' }}</h3>
+    <ul>
+      <li *ngFor="let tip of tips[selectedLang].checkups">{{ tip }}</li>
+    </ul>
+  </div>
+
+  <!-- Warning Signs Card -->
+  <div class="heart-card">
+    <h3>{{ selectedLang === 'ar' ? 'علامات التحذير' : 'Warning Signs' }}</h3>
+    <ul>
+      <li *ngFor="let tip of tips[selectedLang].warningSigns">{{ tip }}</li>
+    </ul>
+  </div>
+</div>

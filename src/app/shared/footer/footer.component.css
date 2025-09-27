@@ -45,7 +45,10 @@
   padding-right: 5px;
 }
 
+/* ===== Social Icons ===== */
 .footer .social-icons a {
+  display: inline-block;
+  margin: 0 8px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -54,17 +57,37 @@
   color: #ff4b5c;
 }
 
+/* Floating animation for icons */
+.floating-icon {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Footer horizontal line */
 .footer hr {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Footer bottom text */
 .footer p.mb-0 {
   margin-top: 15px;
   color: #aaa;
   font-size: 0.9rem;
 }
 
-/* Animation */
+/* ===== General FadeInUp Animation ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;

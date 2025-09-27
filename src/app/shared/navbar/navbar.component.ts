@@ -1,48 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+
 @Component({
   selector: 'app-navbar',
-  standalone: false,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
+  standalone: false
 })
 export class NavbarComponent implements OnInit {
 
   selectedLang: string = 'ar';
 
-  labels: any = {};
-  arLabels: any = {
-    home: 'الرئيسية',
-    about: 'عن المشروع',
-    diseases: 'الأمراض',
-    prevention: 'الوقاية',
-    contact: 'تواصل معنا'
-  };
-  enLabels: any = {
-    home: 'Home',
-    about: 'About',
-    diseases: 'Diseases',
-    prevention: 'Prevention',
-    contact: 'Contact'
-  };
-
   constructor(private langService: LanguageService) { }
 
   ngOnInit(): void {
+    // جلب اللغة المحفوظة من الـ localStorage عند بداية التشغيل
     this.selectedLang = this.langService.getLang();
-    this.updateLabels();
 
+    // متابعة التغيير في اللغة
     this.langService.currentLang.subscribe(lang => {
       this.selectedLang = lang;
-      this.updateLabels();
     });
   }
 
+  // تغيير اللغة من الدروب داون
   changeLang(lang: string) {
     this.langService.changeLang(lang);
-  }
-
-  updateLabels() {
-    this.labels = this.selectedLang === 'en' ? this.enLabels : this.arLabels;
   }
 }

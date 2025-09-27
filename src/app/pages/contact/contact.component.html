@@ -2,57 +2,25 @@
   <h2 class="text-center fw-bold mb-4">{{ currentText.title }}</h2>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form
-        class="shadow p-4 rounded bg-light"
-        (ngSubmit)="onSubmit(contactForm)"
-        #contactForm="ngForm"
-      >
+      <form class="shadow p-4 rounded bg-light" #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
         <div class="mb-3 input-group">
           <span class="input-group-text"><i class="bi bi-person"></i></span>
-          <input
-            type="text"
-            id="name"
-            class="form-control"
-            [placeholder]="currentText.namePlaceholder"
-            name="name"
-            ngModel
-            required
-          />
+          <input type="text" id="name" class="form-control" [placeholder]="currentText.namePlaceholder" name="name" ngModel required />
         </div>
 
         <div class="mb-3 input-group">
           <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-          <input
-            type="email"
-            id="email"
-            class="form-control"
-            [placeholder]="currentText.emailPlaceholder"
-            name="email"
-            ngModel
-            required
-          />
+          <input type="email" id="email" class="form-control" [placeholder]="currentText.emailPlaceholder" name="email" ngModel required />
         </div>
 
         <div class="mb-3 input-group">
           <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
-          <textarea
-            id="message"
-            rows="4"
-            class="form-control"
-            [placeholder]="currentText.messagePlaceholder"
-            name="message"
-            ngModel
-            required
-          ></textarea>
+          <textarea id="message" rows="4" class="form-control" [placeholder]="currentText.messagePlaceholder" name="message" ngModel required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">{{ currentText.submitBtn }}</button>
 
-        <div
-          *ngIf="formSubmitted"
-          class="alert alert-success mt-3"
-          role="alert"
-        >
+        <div *ngIf="formSubmitted" class="alert alert-success mt-3" role="alert">
           {{ currentText.successMsg }}
         </div>
       </form>

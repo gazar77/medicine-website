@@ -14,14 +14,14 @@ export class AboutComponent implements OnInit {
 
   texts = {
     ar: {
-      title: 'عن المشروع',
-      lead: 'هذا المشروع يهدف إلى توعية الناس بأمراض القلب والأوعية الدموية وتقديم نصائح للوقاية منها، من خلال محتوى طبي مبسط وسهل الفهم.',
-      text: 'نحن نؤمن أن الوقاية خير من العلاج، وأن الفهم الصحيح لصحة القلب يساعد على حياة أطول وأكثر صحة.'
+      title: 'عن خمسة لصحتك',
+      lead: 'خمسة لصحتك هي مبادرة توعوية تهدف إلى مساعدتك على اتباع 5 عادات يومية بسيطة للحفاظ على صحتك العامة وصحة قلبك.',
+      text: 'نركز على التوعية بأهمية الغذاء الصحي، النشاط البدني المنتظم، النوم الجيد، الصحة النفسية، والمتابعة الطبية الدورية. نحن نؤمن أن صحتك هي استثمارك الحقيقي، وأن اتباع هذه العادات يحافظ على قلبك وحياتك.'
     },
     en: {
-      title: 'About the Project',
-      lead: 'This project aims to raise awareness about cardiovascular diseases and provide tips for prevention, through simple and easy-to-understand medical content.',
-      text: 'We believe that prevention is better than cure, and a correct understanding of heart health helps for a longer and healthier life.'
+      title: 'About "5 for Your Health"',
+      lead: '"5 for Your Health" is an awareness initiative that helps you follow 5 simple daily habits to maintain your overall health and heart health.',
+      text: 'We focus on raising awareness about healthy nutrition, regular physical activity, good sleep, mental health, and periodic medical check-ups. We believe your health is your true investment, and following these habits keeps your heart and life strong.'
     }
   };
 
@@ -36,11 +36,10 @@ export class AboutComponent implements OnInit {
     });
   }
 
- updateText(lang: string) {
-  const key = lang as 'ar' | 'en';
-  this.aboutTitle = this.texts[key].title;
-  this.aboutLead = this.texts[key].lead;
-  this.aboutText = this.texts[key].text;
-}
-
+  updateText(lang: string) {
+    const key = lang as 'ar' | 'en';
+    this.aboutTitle = this.texts[key].title;
+    this.aboutLead = this.texts[key].lead;
+    this.aboutText = this.texts[key].text;
+  }
 }

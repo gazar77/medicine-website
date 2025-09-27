@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { DiseasesComponent } from './pages/diseases/diseases.component';
 import { PreventionComponent } from './pages/prevention/prevention.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HeartTipsComponent } from './heart-tips/heart-tips.component'; // عدل المسار حسب مكان الكومبوننت
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,8 +13,13 @@ const routes: Routes = [
   { path: 'diseases', component: DiseasesComponent },
   { path: 'prevention', component: PreventionComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '' } 
+
+  // 👉 هنا نضيف صفحة Heart Tips
+  { path: 'heart-tips', component: HeartTipsComponent },
+
+  { path: '**', redirectTo: '' }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

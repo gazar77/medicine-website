@@ -1,0 +1,92 @@
+/* ===== Heart Tips Container ===== */
+.heart-tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f4f8, #e8edf3);
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Card Style ===== */
+.heart-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect */
+.heart-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  background: #fff0f4;
+}
+
+/* Card Titles */
+.heart-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ff4b5c;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+.heart-card h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff4b5c;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Tips List */
+.heart-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.heart-card ul li {
+  background: #fdfdfd;
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Hover on tip */
+.heart-card ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: #ffe9ee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .heart-tips {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .heart-tips {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .heart-card h3 {
+    font-size: 1.2rem;
+  }
+}

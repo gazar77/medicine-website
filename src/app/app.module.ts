@@ -11,6 +11,7 @@ import { PreventionComponent } from './pages/prevention/prevention.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HeartTipsComponent } from './heart-tips/heart-tips.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     PreventionComponent,
     ContactComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HeartTipsComponent
   ],
   imports: [
     BrowserModule,

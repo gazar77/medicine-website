@@ -2,11 +2,13 @@
 <div *ngIf="lang === 'ar'">
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero bg-secondary text-white text-center py-5">
+    <div class="hero bg-success text-white text-center py-5">
       <div class="container">
-        <h1 class="display-4 fw-bold">صحة قلبك.. استثمارك الحقيقي في الحياة</h1>
-        <p class="lead">معلومات طبية دقيقة ومبسطة عن صحة القلب والأوعية الدموية</p>
-        <a routerLink="/diseases" class="btn btn-primary btn-lg m-2">اكتشف الأمراض</a>
+        <h1 class="display-4 fw-bold">صحتك أولويتك</h1>
+        <p class="lead">
+          دليلك للحفاظ على صحتك الجسدية والنفسية من خلال عادات يومية بسيطة وفعّالة
+        </p>
+        <a routerLink="/prevention" class="btn btn-primary btn-lg m-2">ابدأ الآن</a>
         <a routerLink="/about" class="btn btn-outline-light btn-lg m-2">اعرف المزيد</a>
       </div>
     </div>
@@ -22,32 +24,41 @@
 
   <!-- About Short Section -->
   <section class="about-short container">
-    <h2>عن المشروع</h2>
+    <h2>عن المبادرة</h2>
     <p>
-      مشروع توعوي وتعليمي بالتعاون بين كلية الحاسبات والطب يهدف لتقديم محتوى
-      علمي مبسط عن أمراض القلب وطرق الوقاية منها.
+      تهدف هذه المبادرة إلى تعزيز الوعي بأهمية الصحة العامة من خلال التركيز على عدة
+      محاور رئيسية: الغذاء المتوازن، ممارسة الرياضة بانتظام، النوم الكافي، الصحة
+      النفسية، وإجراء الفحوصات الدورية. صحتك مسؤوليتك، والوقاية خير من العلاج.
     </p>
     <a routerLink="/about" class="btn btn-primary">اقرأ المزيد</a>
   </section>
 
-  <!-- Preview Diseases Section -->
+  <!-- Healthy Habits Section -->
   <section class="preview-diseases container">
-    <h2>أكثر الأمراض شيوعًا</h2>
+    <h2>العادات الصحية الأساسية</h2>
     <div class="disease-grid">
       <div class="disease-card">
-        <h3>مرض الشريان التاجي</h3>
-        <p>ضيق أو انسداد في الشرايين التاجية.</p>
+        <h3>الغذاء المتوازن</h3>
+        <p>تناول الخضروات والفواكه، التقليل من الدهون والسكريات، وشرب الماء بكثرة.</p>
       </div>
       <div class="disease-card">
-        <h3>النوبة القلبية</h3>
-        <p>توقف تدفق الدم إلى جزء من عضلة القلب.</p>
+        <h3>ممارسة الرياضة</h3>
+        <p>30 دقيقة يوميًا من النشاط البدني تقي من الأمراض المزمنة وتحافظ على الوزن.</p>
       </div>
       <div class="disease-card">
-        <h3>اضطراب ضربات القلب</h3>
-        <p>اضطراب في ضربات القلب.</p>
+        <h3>النوم الكافي</h3>
+        <p>النوم من 7 إلى 8 ساعات يساعد على تعزيز المناعة وتحسين التركيز.</p>
+      </div>
+      <div class="disease-card">
+        <h3>الصحة النفسية</h3>
+        <p>الابتعاد عن التوتر، ممارسة التأمل، والتواصل الاجتماعي يعزز الراحة النفسية.</p>
+      </div>
+      <div class="disease-card">
+        <h3>الفحوصات الدورية</h3>
+        <p>إجراء فحوصات منتظمة يساعد في الكشف المبكر عن الأمراض وعلاجها.</p>
       </div>
     </div>
-    <a routerLink="/diseases" class="btn btn-outline">المزيد من الأمراض</a>
+    <a routerLink="/heart-tips" class="btn btn-outline">المزيد عن العادات الصحية</a>
   </section>
 </div>
 
@@ -55,11 +66,13 @@
 <div *ngIf="lang === 'en'">
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero bg-secondary text-white text-center py-5">
+    <div class="hero bg-success text-white text-center py-5">
       <div class="container">
-        <h1 class="display-4 fw-bold">Your Heart Health.. Your Real Investment in Life</h1>
-        <p class="lead">Accurate and simple medical information about cardiovascular health</p>
-        <a routerLink="/diseases" class="btn btn-primary btn-lg m-2">Discover Diseases</a>
+        <h1 class="display-4 fw-bold">Your Health Matters</h1>
+        <p class="lead">
+          Your complete guide to maintaining physical and mental health with simple daily habits
+        </p>
+        <a routerLink="/prevention" class="btn btn-primary btn-lg m-2">Start Now</a>
         <a routerLink="/about" class="btn btn-outline-light btn-lg m-2">Learn More</a>
       </div>
     </div>
@@ -75,30 +88,41 @@
 
   <!-- About Short Section -->
   <section class="about-short container">
-    <h2>About the Project</h2>
+    <h2>About the Initiative</h2>
     <p>
-      An educational awareness project in collaboration between the Faculty of Computers and Medicine aiming to provide simple scientific content about heart diseases and prevention methods.
+      This initiative aims to raise awareness about the importance of general health
+      by focusing on five main areas: balanced nutrition, regular exercise, enough
+      sleep, mental health, and regular checkups. Your health is your responsibility,
+      and prevention is better than cure.
     </p>
     <a routerLink="/about" class="btn btn-primary">Read More</a>
   </section>
 
-  <!-- Preview Diseases Section -->
+  <!-- Healthy Habits Section -->
   <section class="preview-diseases container">
-    <h2>Most Common Diseases</h2>
+    <h2>Essential Healthy Habits</h2>
     <div class="disease-grid">
       <div class="disease-card">
-        <h3>Coronary Artery Disease</h3>
-        <p>Narrowing or blockage of the coronary arteries.</p>
+        <h3>Balanced Nutrition</h3>
+        <p>Eat vegetables and fruits, reduce fats and sugars, and drink enough water.</p>
       </div>
       <div class="disease-card">
-        <h3>Heart Attack</h3>
-        <p>Blood flow stops to a part of the heart muscle.</p>
+        <h3>Regular Exercise</h3>
+        <p>30 minutes of daily physical activity prevent chronic diseases and maintain weight.</p>
       </div>
       <div class="disease-card">
-        <h3>Arrhythmia</h3>
-        <p>Irregularity in heartbeats.</p>
+        <h3>Enough Sleep</h3>
+        <p>Sleeping 7–8 hours boosts immunity and improves concentration.</p>
+      </div>
+      <div class="disease-card">
+        <h3>Mental Health</h3>
+        <p>Reducing stress, practicing meditation, and socializing enhance well-being.</p>
+      </div>
+      <div class="disease-card">
+        <h3>Regular Checkups</h3>
+        <p>Routine health checkups help in early detection and treatment of diseases.</p>
       </div>
     </div>
-    <a routerLink="/diseases" class="btn btn-outline">More Diseases</a>
+    <a routerLink="/habits" class="btn btn-outline">More Healthy Habits</a>
   </section>
 </div>

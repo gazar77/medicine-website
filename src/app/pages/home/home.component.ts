@@ -1,26 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 
+interface Stat {
+  value: number;
+  label: string;
+  labelEn: string;
+  prefix?: string;
+  suffix?: string;
+}
+
 @Component({
   selector: 'app-home',
   standalone: false,
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   lang: string = 'ar';
 
-  stats = [
-    { value: 17900000, label: 'حالات وفاة سنويًا بسبب أمراض القلب', labelEn: 'Annual deaths due to cardiovascular diseases', suffix: '' },
-    { value: 80, label: 'يمكن الوقاية من معظم الحالات', labelEn: 'Most cases can be prevented', suffix: '%' },
-    { value: 1, label: 'السبب الأول عالميًا للوفاة', labelEn: 'Leading cause of death globally', prefix: '#' },
+  stats: Stat[] = [
+    {
+      value: 30,
+      suffix: ' دقيقة',
+      label: 'نشاط بدني يوميًا يقلل من خطر الأمراض المزمنة',
+      labelEn: 'Daily physical activity reduces chronic disease risk'
+    },
+    {
+      value: 70,
+      suffix: '%',
+      label: 'من صحتك يعتمد على أسلوب حياتك وتغذيتك',
+      labelEn: 'of your health depends on lifestyle and nutrition'
+    },
+    {
+      value: 8,
+      suffix: ' ساعات',
+      label: 'من النوم الجيد يعزز المناعة والطاقة',
+      labelEn: 'hours of quality sleep boost immunity and energy'
+    }
   ];
 
   constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
-  this.lang = this.langService.getLang();
-  this.langService.currentLang.subscribe(lang => this.lang = lang);
-}
-
+    this.lang = this.langService.getLang();
+    this.langService.currentLang.subscribe(lang => this.lang = lang);
+  }
 }

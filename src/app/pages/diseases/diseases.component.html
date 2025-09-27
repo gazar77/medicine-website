@@ -1,12 +1,28 @@
 <div class="container my-5">
   <h2 class="text-center fw-bold mb-4">{{ title }}</h2>
-  <div class="row">
-    <div class="col-md-4" *ngFor="let card of cards">
+
+  <!-- كروت الصحة العامة -->
+  <div class="row mb-5">
+    <div class="col-md-4" *ngFor="let card of generalCards">
       <div class="card shadow-sm mb-4">
         <div class="card-body">
           <h5 class="card-title">{{ card.title }}</h5>
           <p class="card-text">{{ card.text }}</p>
-          <a href="#" class="btn btn-primary btn-sm">{{ card.btn }}</a>
+          <a [href]="card.link" target="_blank" class="btn btn-primary btn-sm">{{ card.btn }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- قسم أمراض القلب -->
+  <h3 class="fw-bold mb-3">{{ langService.getLang() === 'ar' ? 'أمراض القلب' : 'Heart Diseases' }}</h3>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let card of heartCards">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.text }}</p>
+          <a [href]="card.link" target="_blank" class="btn btn-primary btn-sm">{{ card.btn }}</a>
         </div>
       </div>
     </div>

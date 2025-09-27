@@ -1,25 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="360_F_560967521_wFYYYjX2XvuhIrt4lP5lEGrOf2wDcT4o.jpg" alt="Logo" width="30" height="30" class="me-2" />
-      Cardio Project
+    <!-- شعار الموقع -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/home">
+      <img src="WhatsApp Image 2025-09-27 at 23.28.50_3272fad8.jpg" alt="Logo" width="30" height="30" class="me-2" />
+      خمسة لصحتك
     </a>
+
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" routerLink="/home">{{ labels.home }}</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/about">{{ labels.about }}</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/diseases">{{ labels.diseases }}</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/prevention">{{ labels.prevention }}</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/contact">{{ labels.contact }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/home">{{ selectedLang === 'ar' ? 'الرئيسية' : 'Home' }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about">{{ selectedLang === 'ar' ? 'عن المشروع' : 'About' }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/diseases">{{ selectedLang === 'ar' ? 'الأمراض' : 'Diseases' }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/prevention">{{ selectedLang === 'ar' ? 'الوقاية' : 'Prevention' }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact">{{ selectedLang === 'ar' ? 'تواصل معنا' : 'Contact' }}</a></li>
+
+        <!-- رابط صفحة Heart Tips -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/heart-tips">
+            {{ selectedLang === 'ar' ? 'نصائح للصحة' : 'Health tips' }}
+          </a>
+        </li>
 
         <!-- Dropdown اختيار اللغة -->
         <li class="nav-item ms-3 d-flex align-items-center">

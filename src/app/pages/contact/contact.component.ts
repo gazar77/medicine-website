@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+
 @Component({
   selector: 'app-contact',
   standalone: false,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  lang: string = 'ar';
   formSubmitted = false;
 
   texts = {
@@ -16,7 +18,7 @@ export class ContactComponent implements OnInit {
       emailPlaceholder: 'example@email.com',
       messagePlaceholder: 'اكتب رسالتك هنا',
       submitBtn: 'إرسال',
-      successMsg: '✅ تم إرسال رسالتك بنجاح!'
+      successMsg: 'تم فتح البريد لإرسال رسالتك!'
     },
     en: {
       title: 'Contact Us',
@@ -24,7 +26,7 @@ export class ContactComponent implements OnInit {
       emailPlaceholder: 'example@email.com',
       messagePlaceholder: 'Enter your message',
       submitBtn: 'Send',
-      successMsg: '✅ Your message has been sent successfully!'
+      successMsg: 'Your email client has been opened!'
     }
   };
 
@@ -33,27 +35,29 @@ export class ContactComponent implements OnInit {
   constructor(public langService: LanguageService) {}
 
   ngOnInit() {
-    // ضبط النصوص حسب اللغة الحالية
     this.updateText(this.langService.getLang());
-
-    // متابعة أي تغييرات للغة من الـ Navbar
-    this.langService.currentLang.subscribe(lang => {
-      this.updateText(lang);
-    });
+    this.langService.currentLang.subscribe(lang => this.updateText(lang));
   }
 
- updateText(lang: string) {
-  const key = lang as 'ar' | 'en';
-  this.currentText = this.texts[key];
-}
+  updateText(lang: string) {
+    const key = lang as 'ar' | 'en';
+    this.currentText = this.texts[key];
+    this.lang = key;
+  }
 
-  onSubmit(form: any) {
+  sendEmail(form: any) {
     if (form.valid) {
+      const name = encodeURIComponent(form.value.name);
+      const email = encodeURIComponent(form.value.email);
+      const message = encodeURIComponent(form.value.message);
+
+      const mailtoLink = `mailto:mustknowinmedicine@mustknowinmedicine.com?subject=رسالة من ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${message}`;
+
+      window.location.href = mailtoLink;
+
       this.formSubmitted = true;
       form.reset();
-      setTimeout(() => {
-        this.formSubmitted = false;
-      }, 3000);
+      setTimeout(() => this.formSubmitted = false, 3000);
     }
   }
 }
